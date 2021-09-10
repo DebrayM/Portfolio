@@ -28,7 +28,7 @@ Un portfolio requiert un travail de conception absolument original, il exprime l
 
 - le portfolio doit contenir une section ou même une page « *about* » qui permet : 
     - de présenter le profil de l'auteur et son projet professionnel sous forme d'un paragraphe rédigé;
-    - de télécharger le CV de son auteur au format PDF ;
+    - de télécharger le CV de son auteur au format PDF;
     - d'accéder à son profil sur des sites externes (GitHub et LinkedIn en priorité + une plateforme pour partager des créations + toutes autres plateformes pertinentes témoignant d'une activité sur le wev);
     - de présenter d'autres informations :
         - formations et expériences, par exemple sous forme de *timeline*;
@@ -39,6 +39,8 @@ Un portfolio requiert un travail de conception absolument original, il exprime l
 - bonus : il peut aussi contenir une page « articles » ou « blog » où les articles originaux rédigées sur des sujets en rapport avec la conception et le développement web sont listés et consultables;
 
 - le portfolio peut contenir d'autres informations mais attention, il doit éviter de multiplier les informations sur des sujets sans rapport avec le métier visé.
+
+- n'oubliez pas de rendre votre portfolio **responsive** ;)
 
 ## Exemples de portfolios
 
