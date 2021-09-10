@@ -8,6 +8,8 @@ Dans le cadre du développement d'un Portfolio de professionnel du Web, le besoi
 
 Un portfolio requiert un travail de conception absolument original, il exprime la personnalité de son auteur autant qu'il met en valeur ses compétences. Il n'y a donc pas de limites à l'imagination dans la conception de l'interface visiteur, toutefois ATTENTION ! Un certain nombre d'éléments sont attendus :
 
+- le portfolio doit être **responsive** ;)
+
 - le portfolio peut simplement se structurer autour d'un *template* de *landing page* et d'un *template* de *single page* car il doit *a minima* lister des projets et permettre d'accéder à la fiche individuelle de présentation de chaque projet, toutefois il peut aussi se composer de plusieurs autres pages originales, la page listant les projets devient alors une page « projets » ou « réalisations ». 
     - la page listant les projets doit se composer :
         - de *cards* (ce terme ne doit pas être compris en un sens restreint, l'originalité est totalement permise) résumant le projet (avec une illustration);
@@ -39,8 +41,6 @@ Un portfolio requiert un travail de conception absolument original, il exprime l
 - bonus : il peut aussi contenir une page « articles » ou « blog » où les articles originaux rédigées sur des sujets en rapport avec la conception et le développement web sont listés et consultables;
 
 - le portfolio peut contenir d'autres informations mais attention, il doit éviter de multiplier les informations sur des sujets sans rapport avec le métier visé.
-
-- n'oubliez pas de rendre votre portfolio **responsive** ;)
 
 ## Exemples de portfolios
 
