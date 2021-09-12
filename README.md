@@ -42,6 +42,10 @@ Un portfolio requiert un travail de conception absolument original, il exprime l
 
 - le portfolio peut contenir d'autres informations mais attention, il doit éviter de multiplier les informations sur des sujets sans rapport avec le métier visé.
 
+## Important
+
+Vérifier que votre code HTML est valide : https://validator.w3.org ainsi que vos feuilles CSS : https://jigsaw.w3.org/css-validator/
+
 ## Exemples de portfolios
 
 Voici des liens de portflios venant d'étudiants d'autres session d'Access Code School :
