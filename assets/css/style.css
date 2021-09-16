@@ -1,0 +1,240 @@
+@charset "UTF-8";
+/* couleurs pour la partie à propos*/
+/*rgb(240, 217, 255)*/
+/*rgb(191, 162, 219)*/
+/* couleurs pour la partie mes compétences*/
+/*rgb(213, 238, 187)*/
+/*rgb(95, 122, 97)*/
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+/*version mobile first*/
+header {
+  background-color: #eaeaf1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header #navLogo {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 4vh;
+}
+header #navLogo img {
+  width: 6vh;
+}
+header #navMobile {
+  display: inline;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-right: 4vh;
+}
+header #navMobile svg {
+  width: 6vh;
+}
+header #navDesk {
+  display: none;
+}
+
+main {
+  /* couleur par défaut des textes de la page*/
+  color: #313131;
+  /*A propos */
+  /* section A propos */
+  /* mes compétences */
+  /* Mes réalisations */
+  /* Me contacter */
+}
+main .fond-Light {
+  /* couleur clair des fonds de section*/
+  background-color: #f1f3f7;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+main .fond-Dark {
+  /* couleur plus foncé des fonds de section*/
+  background-color: #eaeaf1;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+main #nom {
+  /* affichage du nom et de la fonction WEB Designer */
+  padding-left: 5vh;
+  padding-bottom: 5vh;
+}
+main #nom p {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: -2.5vh;
+  padding-left: 7vh;
+  margin-bottom: 0;
+}
+main .purpleBgLeft {
+  background: linear-gradient(0.25turn, #BFA2DB, #F0D9FF);
+}
+main .purpleBgRight {
+  background: linear-gradient(-0.25turn, #BFA2DB, #F0D9FF);
+}
+main .purpleDark {
+  margin-left: 2vh;
+  /* 300px pour la version desk et mobile */
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /* en version mobile, le texte est orienté à la verticale */
+}
+main .purpleDark p {
+  padding-left: 2vh;
+  font-size: 2em;
+  color: #FAF8FC;
+  padding-top: 8vh;
+}
+main .purpleLight {
+  margin-left: 2vh;
+  /* 300px pour la version desk et mobile */
+  width: 300px;
+  height: 300px;
+  background-color: #F0D9FF;
+  border-radius: 50%;
+}
+main .purpleLight p {
+  padding-left: 2vh;
+  font-size: 2em;
+  color: #3B185F;
+  padding-top: 8vh;
+}
+main .greenDark {
+  margin-left: 2vh;
+  width: 350px;
+  height: 350px;
+  background-color: #5F7A61;
+  border-radius: 50%;
+}
+main .greenDark p {
+  font-size: 2em;
+  color: #FAF8FC;
+  padding-top: 8vh;
+}
+main .greenDark img {
+  width: 50px;
+}
+main .greenBgRight {
+  background: linear-gradient(-0.25turn, #5F7A61, #D5EEBB);
+}
+main .greenBgLeft {
+  background: linear-gradient(0.25turn, #5F7A61, #D5EEBB);
+}
+main .greenLight {
+  margin-left: 2vh;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+main .greenLight p {
+  font-size: 2em;
+  color: #293429;
+  padding-top: 8vh;
+}
+main .greenLight img {
+  width: 50px;
+}
+main .divFlexCPT {
+  display: flex;
+  flex-direction: row;
+}
+main .divTop {
+  padding-top: 8vh;
+}
+main .Rond {
+  width: 200px;
+  border-radius: 50%;
+}
+main .divSVG {
+  margin-top: 2vh;
+  margin-left: 2vh;
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background-color: #f1f3f7;
+}
+main .divSVG svg {
+  width: 34px;
+  height: 34px;
+  padding-top: 1.5vh;
+  padding-left: 1.5vh;
+}
+main #sectionContact {
+  text-align: center;
+}
+main #divContact {
+  width: 50%;
+  border-radius: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+main .styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(43, 224, 27, 0.7);
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+main .styled:hover {
+  background-color: rgba(61, 78, 236, 0.7);
+}
+main .styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+main label {
+  font-weight: bold;
+  width: 250px;
+}
+main input {
+  width: 250px;
+}
+main button {
+  margin-top: 3vh;
+}
+
+/* les classes divFlexRow et monTexte sont communes à tout le Body */
+.divFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.divFlexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.monTexte {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+footer {
+  background-color: #f1f3f7;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+footer #divFlexRowFoot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer .divFlexLogo {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}/*# sourceMappingURL=style.css.map */

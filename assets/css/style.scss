@@ -1,0 +1,239 @@
+@import 'variables';
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+/*version mobile first*/
+header{
+    background-color: $bgDark;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    #navLogo{
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        padding-left: 4vh;
+        img{
+            width: 6vh;
+        }
+    }
+    #navMobile{
+
+        display: inline;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        padding-right: 4vh;
+        svg{
+            width: 6vh;
+        }
+    }
+    #navDesk{
+        display: none;
+    }
+}
+
+main{
+    /* couleur par défaut des textes de la page*/
+    color: $textColor;
+    .fond-Light{
+        /* couleur clair des fonds de section*/
+        background-color: $bgLight;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    .fond-Dark{
+        /* couleur plus foncé des fonds de section*/
+        background-color: $bgDark;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    /*A propos */
+    #nom{
+        /* affichage du nom et de la fonction WEB Designer */
+        padding-left: 5vh;
+        padding-bottom: 5vh;
+        p{
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: -2.5vh;
+            padding-left: 7vh;
+            margin-bottom: 0;
+    }}
+    /* section A propos */
+    .purpleBgLeft{
+        background: linear-gradient(0.25turn,#BFA2DB, #F0D9FF);
+    }
+    .purpleBgRight{
+        background: linear-gradient(-0.25turn,#BFA2DB, #F0D9FF);
+    }
+    .purpleDark{
+        margin-left: 2vh;
+        /* 300px pour la version desk et mobile */
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        /* en version mobile, le texte est orienté à la verticale */
+        p{
+            padding-left: 2vh;
+            font-size: 2em;
+            color: $txtPurpleLight;
+            padding-top: 8vh;
+        }
+    }
+    .purpleLight{
+        margin-left: 2vh;
+        /* 300px pour la version desk et mobile */
+        width: 300px;
+        height: 300px;
+        background-color: $bgPurpleLight;
+        border-radius: 50%;
+        p{
+            padding-left: 2vh;
+            font-size: 2em;
+            color:$txtPurpleDark;
+            padding-top: 8vh;
+        }
+    }
+
+    /* mes compétences */
+    .greenDark{
+        margin-left: 2vh;
+        width: 350px;
+        height: 350px;
+        background-color: $bgGreenDark;
+        border-radius: 50%;
+        p{
+            font-size: 2em;
+            color: $txtGreenLight;
+            padding-top: 8vh;
+        }
+        img{
+            width: 50px;
+        }
+    }
+    .greenBgRight{
+        background: linear-gradient(-0.25turn,#5F7A61, #D5EEBB);
+    }
+    .greenBgLeft{
+        background: linear-gradient(0.25turn,#5F7A61, #D5EEBB); 
+    }
+    .greenLight{
+        margin-left: 2vh;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        p{
+            font-size: 2em;
+            color:$txtGreenDark;
+            padding-top: 8vh;
+        }
+        img{
+            width: 50px;
+        }
+    }
+    .divFlexCPT{
+        display: flex;
+        flex-direction: row;
+    }
+    .divTop{
+       padding-top: 8vh;
+    }
+
+    /* Mes réalisations */
+    .Rond{
+        width: 200px;
+        border-radius: 50%;
+    }
+    /* Me contacter */
+    .divSVG{
+        margin-top: 2vh;
+        margin-left: 2vh;
+        width: 55px;
+        height: 55px;
+        border-radius: 10px;
+        background-color: $bgLight;
+        
+        svg{
+            width: 34px;
+            height: 34px;
+            padding-top: 1.5vh;
+            padding-left: 1.5vh; 
+        }
+    }
+    #sectionContact{
+        text-align: center;
+    }
+    #divContact{
+        width: 50%;  
+        border-radius: 20%;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+    .styled {
+        border: 0;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 10px;
+        background-color: rgba(43, 224, 27, 0.7);
+        background-image: linear-gradient(to top left,
+                                          rgba(0, 0, 0, .2),
+                                          rgba(0, 0, 0, .2) 30%,
+                                          rgba(0, 0, 0, 0));
+        box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                    inset -2px -2px 3px rgba(0, 0, 0, .6);
+    }
+    .styled:hover {
+        background-color: rgba(61, 78, 236, 0.7);
+    }
+    .styled:active {
+        box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                    inset 2px 2px 3px rgba(0, 0, 0, .6);
+    }
+    label{
+        font-weight: bold;
+        width: 250px;
+    }
+    input{
+        width: 250px;
+    }
+    button{
+        margin-top: 3vh;
+    }
+}
+/* les classes divFlexRow et monTexte sont communes à tout le Body */
+.divFlex{
+    display: flex;
+    flex-direction: column;
+}
+.divFlexRow{
+    display: flex;
+    flex-direction: row;
+}
+.monTexte {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+footer{
+    background-color: $bgLight;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    #divFlexRowFoot{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .divFlexLogo{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+}

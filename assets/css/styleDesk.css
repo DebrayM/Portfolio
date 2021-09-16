@@ -1,0 +1,70 @@
+@media (min-width: 1200px) {
+  header #navMobile {
+    display: none;
+  }
+  header #navDesk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  header #navDesk a {
+    text-decoration: none;
+    color: #313131;
+  }
+
+  main .sectSize {
+    height: 100vh;
+  }
+  main .purpleDark {
+    margin-left: 4vh;
+  }
+  main .purpleDark p {
+    padding-top: 14vh;
+  }
+  main .purpleLight {
+    margin-left: 4vh;
+  }
+  main .purpleLight p {
+    padding-top: 14vh;
+  }
+  main .purpleLight:hover {
+    transform: perspective(500px) translate3d(10px, 0px, 100px);
+    opacity: 0.5;
+  }
+  main .greenDark {
+    margin-left: 4vh;
+  }
+  main .greenDark p {
+    padding-top: 12vh;
+  }
+  main .greenLight {
+    margin-left: 4vh;
+  }
+  main .greenLight p {
+    padding-top: 12vh;
+  }
+  main .divFlexCPT {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+  main .divTop {
+    padding-top: 1vh;
+  }
+
+  .monTexte {
+    -ms-writing-mode: lr-tb;
+        writing-mode: horizontal-tb;
+    text-orientation: sideways;
+    text-align: center;
+  }
+
+  .divFlex {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .divCenter {
+    justify-content: space-evenly;
+  }
+}/*# sourceMappingURL=styleDesk.css.map */

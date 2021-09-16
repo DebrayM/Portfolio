@@ -1,0 +1,73 @@
+@media (min-width: 1200px) {
+
+header{
+    #navMobile{
+        display: none;
+    }
+    #navDesk{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        a{
+            text-decoration: none;
+            color: rgb(49, 49, 49);
+        }
+    }
+}
+
+main{
+    .sectSize{
+        height: 100vh;
+    }
+    .purpleDark{
+        margin-left: 4vh;
+        p{
+            padding-top: 14vh;
+        }
+    }
+    .purpleLight{
+        margin-left: 4vh;
+        p{
+            padding-top: 14vh;
+        }
+    }
+    .purpleLight:hover{
+        transform: perspective(500px) translate3d(10px,0px,100px);
+        opacity: 0.5;
+    }
+    .greenDark{
+        margin-left: 4vh;
+        p{
+            padding-top: 12vh;
+        }
+    }
+    .greenLight{
+        margin-left: 4vh;
+        p{
+            padding-top: 12vh;
+        }
+    }
+    .divFlexCPT{
+        display: flex;
+        flex-direction: row;
+        text-align: center;  
+    }
+    .divTop{
+        padding-top: 1vh;
+    }
+}
+
+.monTexte {
+    writing-mode: horizontal-tb;
+    text-orientation: sideways;
+    text-align: center;
+}
+.divFlex{
+    display: flex;
+    flex-direction: row;
+}
+.divCenter{
+    justify-content: space-evenly;
+}
+
+}
