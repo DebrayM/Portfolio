@@ -149,7 +149,9 @@ main .divTop {
   padding-top: 8vh;
 }
 main .Rond {
-  width: 200px;
+  margin-top: 5vh;
+  margin-left: 2vh;
+  width: 300px;
   border-radius: 50%;
 }
 main .divSVG {

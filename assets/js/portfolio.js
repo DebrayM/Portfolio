@@ -72,20 +72,43 @@ function isMobileDevice() {
     else {
        return false;
      }
-   }
-
-function Gdp(){
-    let leTexte = "<p>Plus de 20 années d'expérience en gestion de projet</p>";
-    this.innerHTML = leTexte;
-    this.style.transform = "perspective(500px) translate3d(10px,0px,100px)";
 }
-
+function Gdporiginal(){
+    let txt = document.getElementById("demo1");
+    txt.remove();
+    document.getElementById("purpleBubble1").style.transform = "";
+    let leTexte = '<p class="monTexte">Gestion de projet</p>';
+    document.getElementById("purpleBubble1").innerHTML = leTexte;
+}
+function Gdp(){
+    this.style.transform = "perspective(500px) translate3d(10px,0px,100px)";
+    let leTexte = "<p id='demo1'>Plus de 20 années d'expérience en gestion de projet</p>";
+    this.innerHTML = leTexte;
+    let txt = document.getElementById("demo1"); 
+    txt.style.textAlign = "center";
+    txt.style.fontSize = "1.8em";
+    txt.style.paddingTop = "5vh";
+}
+function Mtdoriginal(){
+    let txt = document.getElementById("demo2");
+    txt.remove();
+    document.getElementById("purpleBubble2").style.transform = "";
+    let leTexte = '<p class="monTexte">Méthodes</p>';
+    document.getElementById("purpleBubble2").innerHTML = leTexte;
+}
 function Mtd(){
     this.style.transform = "perspective(500px) translate3d(10px,0px,100px)";
+    let leTexte = "<p id='demo2'>Coach Agile et Scrum Master, PMO, Formatrice en Méthodologie (V, W)</p>";
+    this.innerHTML = leTexte;
+    let txt = document.getElementById("demo2"); 
+    txt.style.textAlign = "center";
+    txt.style.fontSize = "1.8em";
+    txt.style.paddingTop = "5vh";
 }
 window.onload = function() {
+    document.getElementById("purpleBubble1").addEventListener("mouseenter", Gdp);
+    document.getElementById("purpleBubble2").addEventListener("mouseenter", Mtd);
 
-    document.getElementById("purpleBubble1").addEventListener("click", Gdp);
-    document.getElementById("purpleBubble2").addEventListener("click", Mtd);
-
+    document.getElementById("purpleBubble1").addEventListener("mouseout", Gdporiginal);
+    document.getElementById("purpleBubble2").addEventListener("mouseout", Mtdoriginal); 
 }

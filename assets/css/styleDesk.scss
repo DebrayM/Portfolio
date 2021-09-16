@@ -5,17 +5,35 @@ header{
         display: none;
     }
     #navDesk{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        a{
-            text-decoration: none;
-            color: rgb(49, 49, 49);
+        display: inline;
+        padding-right: 5vh;
+        padding-top: 5vh;
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 6vh;
+            a{
+                text-decoration: none;
+                color: rgb(49, 49, 49);
+                font-size: medium;
+            }
         }
     }
 }
 
 main{
+    #home{
+        position: fixed;
+        left: 95%;
+        width: 45px;
+        height: 45px;
+        background-color: #5F7A61;
+        border-radius: 50%;
+        text-align: center;
+        color: #FAF8FC;
+        padding-top: 5px;
+        text-transform: none;
+    }
     .sectSize{
         height: 100vh;
     }
@@ -38,13 +56,15 @@ main{
     .greenDark{
         margin-left: 4vh;
         p{
-            padding-top: 12vh;
+            padding-left: 4vh;
+            padding-top: 10vh;
         }
     }
     .greenLight{
         margin-left: 4vh;
         p{
-            padding-top: 12vh;
+            padding-left: 4vh;
+            padding-top: 10vh;
         }
     }
     .divFlexCPT{
@@ -53,14 +73,13 @@ main{
         text-align: center;  
     }
     .divTop{
-        padding-top: 1vh;
+        padding-top: 16vh;
     }
 }
 
 .monTexte {
     writing-mode: horizontal-tb;
-    text-orientation: sideways;
-    text-align: center;
+    text-orientation: mixed;
 }
 .divFlex{
     display: flex;

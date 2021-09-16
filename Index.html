@@ -15,7 +15,7 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <header>
+    <header id="Haut">
         <div id="navLogo"><img src="assets/icons/MD.png" alt="Mes initiales : M D"></div>
         <div id='navMobile'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="#000" class="bi bi-list" viewBox="0 0 16 16">
@@ -23,31 +23,34 @@
             </svg>
         </div>
         <div id='navDesk'>
-            <a href="">Qui sui-je?</a>
-            <a href="">Mes compétences</a>
-            <a href="">Mes réalisations</a>
-            <a href="">Me contacter</a>
+            <ul>
+                <li><a href="#sect1">Qui suis-je?</a></li>
+                <li><a href="#sect2">Mes compétences</a></li>
+                <li><a href="#sect3">Mes réalisations</a></li>
+                <li><a href="#sectionContact">Me contacter</a></li>
+            </ul>
         </div>
     </header>
     <main>
-        <section class="fond-Light divFlex sectSize">
+        <section class="fond-Light divFlex sectSize" id="sect1">
+            <a href="#Haut" id="home">Haut</a>
             <div id="nom">
                 <img src="assets/icons/martine.png" alt="Mon prénom : Martine" >
                 <p>Web Designer</p>
             </div>
             <div class="divFlexRow">
-            <div class="purpleDark purpleBgLeft" id="purpleBubble1">
-                <p class="monTexte">Gestion de projet</p>
-            </div>
-            <div class="purpleLight">
-                <p class="monTexte">Web Design</p>
-            </div>
-            <div class="purpleDark purpleBgRight" id="purpleBubble2">
-                <p class="monTexte">Méthodes</p>
-            </div>
+                <div class="purpleDark purpleBgLeft" id="purpleBubble1">
+                    <p class="monTexte">Gestion de projet</p>
+                </div>
+                <div class="purpleLight">
+                    <p class="monTexte">Web Design</p>
+                </div>
+                <div class="purpleDark purpleBgRight" id="purpleBubble2">
+                    <p class="monTexte">Méthodes</p>
+                </div>
             </div>
         </section>
-        <section class="fond-Dark sectSize">
+        <section class="fond-Dark sectSize" id="sect2">
             <div class="divFlexRow divCenter">
             <div class="greenLight greenBgRight divFlexCPT">
                 <p class="monTexte">UX</p>
@@ -70,35 +73,27 @@
             </div>
             </div>
         </section>
-        <section class="fond-Light sectSize">
+        <section class="fond-Light sectSize" id="sect3">
             <div class="container">
                 <!--container : permet de présenter mes projets-->
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="purpleDark" id="litle">
+                        <div class="purpleDark purpleBgLeft">
                             <p>UX</p>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="purpleLight" id="litle">
-                            <p>Intégration</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="purpleDark" id="litle">
-                            <p>...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
                         <img src="assets/images/Deezer.png" alt="Présentation du projet Deezer" class="Rond">
                     </div>
                     <div class="col-md-4">
+                        <div class="purpleLight">
+                            <p>Intégration</p>
+                        </div>
                         <img src="assets/images/Licorne.png" alt="Présentation du projet Licorne" class="Rond">
                     </div>
                     <div class="col-md-4">
-                        <img src="assets/images/Licorne.png" alt="Présentation du projet Licorne" class="Rond">
+                        <div class="purpleDark purpleBgRight">
+                            <p>UX & Intégration</p>
+                        </div>
+                        <img src="assets/images/Music.png" alt="Présentation du projet Licorne" class="Rond">
                     </div>
                 </div>
             </div>

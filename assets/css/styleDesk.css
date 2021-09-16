@@ -3,15 +3,33 @@
     display: none;
   }
   header #navDesk {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: inline;
+    padding-right: 5vh;
+    padding-top: 5vh;
   }
-  header #navDesk a {
+  header #navDesk ul {
+    list-style: none;
+    display: flex;
+    gap: 6vh;
+  }
+  header #navDesk ul a {
     text-decoration: none;
     color: #313131;
+    font-size: medium;
   }
 
+  main #home {
+    position: fixed;
+    left: 95%;
+    width: 45px;
+    height: 45px;
+    background-color: #5F7A61;
+    border-radius: 50%;
+    text-align: center;
+    color: #FAF8FC;
+    padding-top: 5px;
+    text-transform: none;
+  }
   main .sectSize {
     height: 100vh;
   }
@@ -35,13 +53,15 @@
     margin-left: 4vh;
   }
   main .greenDark p {
-    padding-top: 12vh;
+    padding-left: 4vh;
+    padding-top: 10vh;
   }
   main .greenLight {
     margin-left: 4vh;
   }
   main .greenLight p {
-    padding-top: 12vh;
+    padding-left: 4vh;
+    padding-top: 10vh;
   }
   main .divFlexCPT {
     display: flex;
@@ -49,14 +69,13 @@
     text-align: center;
   }
   main .divTop {
-    padding-top: 1vh;
+    padding-top: 16vh;
   }
 
   .monTexte {
     -ms-writing-mode: lr-tb;
         writing-mode: horizontal-tb;
-    text-orientation: sideways;
-    text-align: center;
+    text-orientation: mixed;
   }
 
   .divFlex {
