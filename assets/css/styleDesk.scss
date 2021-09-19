@@ -1,92 +1,14 @@
 @media (min-width: 1200px) {
 
-header{
-    #navMobile{
-        display: none;
-    }
-    #navDesk{
-        display: inline;
-        padding-right: 5vh;
+
+#sect2{
+    .PhotoOrdi{
+        padding-left: 5vh;
         padding-top: 5vh;
-        ul {
-            list-style: none;
-            display: flex;
-            gap: 6vh;
-            a{
-                text-decoration: none;
-                color: rgb(49, 49, 49);
-                font-size: medium;
-            }
-        }
-    }
+        opacity: 0.4;
+        display: block;
+    }  
 }
 
-main{
-    #home{
-        position: fixed;
-        left: 95%;
-        width: 45px;
-        height: 45px;
-        background-color: #5F7A61;
-        border-radius: 50%;
-        text-align: center;
-        color: #FAF8FC;
-        padding-top: 5px;
-        text-transform: none;
-    }
-    .sectSize{
-        height: 100vh;
-    }
-    .purpleDark{
-        margin-left: 4vh;
-        p{
-            padding-top: 14vh;
-        }
-    }
-    .purpleLight{
-        margin-left: 4vh;
-        p{
-            padding-top: 14vh;
-        }
-    }
-    .purpleLight:hover{
-        transform: perspective(500px) translate3d(10px,0px,100px);
-        opacity: 0.5;
-    }
-    .greenDark{
-        margin-left: 4vh;
-        p{
-            padding-left: 4vh;
-            padding-top: 10vh;
-        }
-    }
-    .greenLight{
-        margin-left: 4vh;
-        p{
-            padding-left: 4vh;
-            padding-top: 10vh;
-        }
-    }
-    .divFlexCPT{
-        display: flex;
-        flex-direction: row;
-        text-align: center;  
-    }
-    .divTop{
-        padding-top: 16vh;
-    }
-}
-
-.monTexte {
-    writing-mode: horizontal-tb;
-    text-orientation: mixed;
-}
-.divFlex{
-    display: flex;
-    flex-direction: row;
-}
-.divCenter{
-    justify-content: space-evenly;
-}
 
 }
