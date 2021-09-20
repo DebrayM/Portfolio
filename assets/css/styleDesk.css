@@ -1,0 +1,75 @@
+@media (min-width: 1200px) {
+  /*rgb(226, 149, 120)*/
+  /*rgb(255, 221, 210)*/
+  /*rgb(237, 246, 249)*/
+  /*rgb(131, 197, 190)*/
+  /*rgb(0, 109, 119)*/
+  .menu {
+    display: inline-block;
+    z-index: 20;
+    width: 100%;
+    background-color: #EDF6F9;
+    position: fixed;
+    text-align: left;
+  }
+  .menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  .menu ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .menu ul li div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .menu ul li div.liCpt {
+    background-color: #E29578;
+  }
+  .menu ul li div.liAcc {
+    background-color: #83C5BE;
+  }
+  .menu ul li div.liPjt {
+    background-color: #006D77;
+  }
+  .menu ul li div.liCtt {
+    background-color: #FFDDD2;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .vertical {
+    transform: rotate(-90deg);
+    font-weight: 700;
+    font-size: 2rem;
+    position: absolute;
+  }
+
+  #home .homeLft img {
+    max-width: 65%;
+  }
+  #home .homeRgt {
+    background-color: #83C5BE;
+  }
+
+  #Competences .PhotoOrdi {
+    padding-left: 5vh;
+    padding-top: 5vh;
+    opacity: 0.4;
+    display: block;
+  }
+
+  #Projets .imgProjet30 {
+    width: 30%;
+  }
+  #Projets .imgProjet45 {
+    width: 45%;
+  }
+}/*# sourceMappingURL=styleDesk.css.map */

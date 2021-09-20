@@ -11,8 +11,12 @@ body {
   margin: 0;
 }
 
+.menu {
+  display: none;
+}
+
 .photo-martine {
-  max-width: 60%;
+  max-width: 100%;
 }
 
 .row {
@@ -33,43 +37,35 @@ body {
   width: 90%;
   left: 0;
 }
-#home .sect1Lft img {
-  z-index: 10;
-  position: absolute;
-  width: 350px;
-  max-width: 65%;
-  vertical-align: middle;
-}
-#home .sect1Ctr {
-  margin-left: 3vh;
-  margin-right: 3vh;
-}
-#home .sect1Ctr .sect1Txt {
-  font-size: 1.3em;
-  padding-left: 60px;
-  padding-right: 180px;
-  padding-top: 170px;
-  padding-bottom: 100px;
+#home .homeLft img {
+  z-index: 5;
   position: relative;
+  max-width: 100%;
+  padding-top: 0;
 }
-#home .sect1Rgt {
-  background-color: #83C5BE;
+#home .homeCtr {
+  z-index: 10;
+  background-color: white;
+  padding-left: 3vh;
+  padding-right: 3vh;
 }
-#home .bloc-home {
-  right: 0;
-  bottom: 12%;
-  padding-bottom: 535px;
-  width: 60px;
+#home .homeCtr .homeCtrTxt {
+  font-size: 1.3em;
+  position: relative;
+  padding: 2vh;
+}
+#home .homeRgt {
+  display: none;
 }
 
-#sect2 {
+#Competences {
   display: block;
 }
-#sect2 .sect2-1 {
+#Competences .sectCompetences {
   background-color: #E29578;
   opacity: 0.6;
 }
-#sect2 .PhotoOrdi {
+#Competences .PhotoOrdi {
   display: none;
 }
 
@@ -115,23 +111,19 @@ body {
 }
 #contact #formContact input {
   margin-bottom: 2vh;
-  border-color: #006D77;
   padding: 12px 20px;
-  display: inline-block;
-  box-sizing: border-box;
   width: 100%;
-  border: 3px solid #006D77;
-  border-radius: 4px;
+  border: none;
+  border-bottom: 2px solid #006D77;
 }
 #contact #formContact #name {
-  width: 30vh;
+  width: 100%;
 }
 #contact #formContact #mail {
-  width: 40vh;
+  width: 100%;
 }
 #contact #formContact #subject {
-  width: 40vh;
-  height: 8vh;
+  width: 100%;
 }
 #contact button {
   margin-top: 2vh;

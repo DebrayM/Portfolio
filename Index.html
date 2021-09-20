@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,16 +13,24 @@
     <title>Portfolio</title>
 </head>
 <body style="overflow-y: scroll;">
+    <div class="menu">
+        <ul>
+            <li><div class="liAcc"></div><a href="/#home">Accueil</a></li>
+            <li><div class="liCpt"></div><a href="/#Competences">Compétences</a></li>
+            <li><div class="liPjt"></div><a href="/#Projets">Projets</a></li>
+            <li><div class="liCtt"></div><a href="/#contact">Contact</a></li>
+        </ul>
+    </div>
     <section id="home">
         <div class="container-fluid">
             <div class="row min-vh-100">
-                <div class="col-lg-5 sect1Lft d-flex align-items-center justify-content-end p-0 position-relative">
+                <div class="col-lg-5 homeLft d-flex align-items-center justify-content-end position-relative p-0">
                     <img src="assets/images/IMG_20210210_151105.jpg" alt="image martine" class="photo-martine">
                     <div class="col-home h-100 position-absolute"></div>
                 </div>
-                <div class="col-lg-5 sect1Ctr d-flex align-items-center justify-content-end p-0">
+                <div class="col-lg-5 homeCtr d-flex align-items-center justify-content-end position-relative">
                     <div class="row d-flex justify-content-center">
-                        <div class="col-lg-12 sect1Txt text-justify" style="display: initial; right: 0px; opacity: 1; transition: all 1s ease 0s;">
+                        <div class="col-lg-12 homeCtrTxt text-justify" style="display: initial; opacity: 1; transition: all 1s ease 0s;">
                             <img src="assets/icons/martine.png" alt="logo martine">
                             <h2>Web Designer</h2>
                             <p>Après plus de 20 ans d'expérience en gestion de projet,</p>
@@ -30,42 +38,49 @@
                         </div>
                     </div>
                 </div>
-                <div class="col sect1Rgt d-flex align-items-center justify-content-end p-0 "></div>
+                <div class="col homeRgt d-flex align-items-center justify-content-end"></div>
             </div>
         </div>
     </section>
-    <section id="sect2">
+    <section id="Competences">
         <div class="container-fluid">
             <div class="row min-vh-100">
-                <div class="d-lg-flex justify-content-center">
-                    <div class="col-md-12 col-lg-1 p-md-0 p-lg-3 d-md-none d-lg-block sect2-1">
-                    </div>
-                    <div class="col-md-12 col-lg-8 p-md-0 p-lg-3 d-md-none d-lg-block">
-                        <img src="assets/images/istockphoto-972079066-170667a.jpg" alt="Photo ordinateur" class="PhotoOrdi">
-                        <div class="sect2-txt position relative mx-auto ml-1 float-lg-right p-3">
-                            <p></p>
-                        </div>
-                        <img src="assets/images/Tableau-outils.png" alt="photo ordinateur" class="Outils">
-                    </div>
-                    <div class="col-md-12 col-lg-3 p-md-0 p-lg-3 d-md-none d-lg-block sect2-1">
+                <div class="col-md-12 col-lg-2 sectCompetences d-flex align-items-center justify-content-end p-0">
+                    <h3 class="vertical">Mes compétences</h3>
+                </div>
+
+                <div class="col-md-12 col-lg-9 p-md-0 p-lg-3 d-md-none d-lg-block">
+
+                    <img src="assets/images/istockphoto-972079066-170667a.jpg" alt="Photo ordinateur" class="PhotoOrdi">
+                    <div class="sect2-txt position relative mx-auto ml-1 float-lg-right p-3">
+                        <p>Développement, intégration (Sites Web et responsive) et Design.</p>
+                        <img src="assets/images/OutilsWD.png" alt="photo outils Web Design & intégration">
                     </div> 
-                </div>             
+                    <div class="sect2-txt position relative mx-auto ml-1 float-lg-right p-3">
+                        <p>Gestion de projets, Coach Agil, formatrice (Méthodoligies)</p>
+                        <img src="assets/images/OutilsGdP.png" alt="Photo outils de gestion de projets">
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-1 sectCompetences d-flex align-items-center justify-content-end p-0"></div>           
             </div>
         </div>
     </section>
     <section id="Projets">
         <div class="container-fluid">
             <div class="row min-vh-100">
-                <div class="col-md-12 col-lg-1 p-md-0 p-lg-3 sectProjets d-flex align-items-center justify-content-end p-0 position-relative">
-                    <div class="col-home h-100 position-absolute"></div>
+                <div class="col-md-12 col-lg-2 sectProjets d-flex align-items-center justify-content-end p-0">
+                    <h3 class="vertical">Mes projets</h3>
                 </div>
-                <div class="col-md-12 col-lg-10 d-flex align-items-center justify-content-end p-0">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-lg-12 sect1Txt text-justify" style="display: initial; right: 0px; opacity: 1; transition: all 1s ease 0s;">
-                        </div>
+                <div class="col-md-12 col-lg-9">
+                    <div class="row d-flex align-items-center justify-content-end p-0">
+                        <div class="col-md-4"><img src="assets/images/Deezer.png" alt="" class="img-fluid"></div>
+                        <div class="col-md-4"><img src="assets/images/Music.png" alt="" class="img-fluid"></div>
+                        <div class="col-md-4"><img src="assets/images/TheGarden.png" alt="" class="img-fluid"></div>
+                        <div class="col-md-4"><img src="assets/images/Licorne.png" alt="" class="img-fluid5"></div>
+                        <div class="col-md-4"><img src="assets/images/Doger.png" alt="" class="img-fluid"></div>
                     </div>
                 </div>
-                <div class="col sectProjets d-flex align-items-center justify-content-end p-0 "></div>
+                <div class="col-md-12 col-lg-1 sectProjets d-flex align-items-center justify-content-end p-0"></div>
             </div>
         </div>
     </section>
@@ -73,9 +88,9 @@
         <div class="container-fluid">
             <div class="row min-vh-100">
                 <div class="d-lg-flex justify-content-center">
-                    <div class="sectContact col-md-12 col-lg-4 p-md-0 p-lg-3 d-md-none d-lg-block">
+                    <div class="sectContact col-md-12 col-lg-5 d-md-none d-lg-block">
                     </div>
-                    <div class="col-md-12 col-lg-4 p-md-0 p-lg-3 d-md-none d-lg-block">
+                    <div class="col-md-12 col-lg-5 d-md-none d-lg-block">
                         <div class="position relative mx-auto ml-1 float-lg-right p-5">
                             <div class="divFlexLogo">
                                 <a href="https://github.com/DebrayM" target="_blank">
@@ -90,20 +105,20 @@
                                </a>
                            </div>
                            <div class="Tel">
-                                <p class="gras">Me joindre par téléphone</p>
+                                <p class="gras">Pour me contacter par téléphone</p>
                                 <p class="gras">06 86 90 78 10</p>
                            </div>
-
+                           <form name="formContact" method="post"></form>
                             <div id="formContact">
-                                <label for="">M'envoyer un message</label>
-                                <input type="text" id="name" name="name" placeholder="Votre nom">
-                                <input type="text" id="mail" name="mail"placeholder="Votre email">
-                                <input type="textarea" id="subject" name="subject" placeholder="Votre message">
+                                <label for="formContact">Pour m'envoyer un message</label>
+                                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                                <input type="text" id="mail" name="mail"placeholder="Votre email" required>
+                                <input type="textarea" id="subject" name="subject" placeholder="Votre message" required>
                             </div>
-                            <button type="button" class="styled">Envoyer</button>  
+                            <button type="submit" id="formContactBTN" class="styled">Envoyer</button>  
                         </div>
                     </div>
-                    <div class="sectContact col-md-12 col-lg-4 p-md-0 p-lg-3 d-md-none d-lg-block sect2-1">
+                    <div class="sectContact col-md-12 col-lg-2 d-md-none d-lg-block">
                     </div> 
                 </div>             
             </div>
