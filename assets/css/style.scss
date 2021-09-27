@@ -62,12 +62,20 @@ body{
     .PhotoOrdi{
         display: none;
     }
-
+    .logocv{
+        width: 34px;
+    }
+    a{
+        text-decoration: none;
+        color: $Ming;
+    }
+    .sectCompetences-text{
+        font-size: 1.2em;
+    }
 }
 
 #Projets{
     display: block;
-
     .sectProjets{
         background-color: $Ming;
         opacity: 0.6;

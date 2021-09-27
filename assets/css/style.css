@@ -68,6 +68,16 @@ body {
 #Competences .PhotoOrdi {
   display: none;
 }
+#Competences .logocv {
+  width: 34px;
+}
+#Competences a {
+  text-decoration: none;
+  color: #006D77;
+}
+#Competences .sectCompetences-text {
+  font-size: 1.2em;
+}
 
 #Projets {
   display: block;
