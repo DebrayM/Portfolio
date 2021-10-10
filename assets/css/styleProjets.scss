@@ -1,0 +1,32 @@
+@import 'variables.scss';
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    margin: 0;  
+}
+.row{
+    flex-wrap: wrap;
+}
+.min-vh-100 {
+    min-height: 100vh!important;
+}
+#Projets{
+    display: block;
+    .sectprojets{
+        background-color: $Ming;
+        opacity: 0.6;
+    }
+    h4{
+        color: $Ming;
+        font-weight: bold;
+    }
+    .vertical{
+        transform: rotate(-90deg);
+        font-weight: 700;
+        font-size: 2rem;
+        position: absolute;
+    }
+}

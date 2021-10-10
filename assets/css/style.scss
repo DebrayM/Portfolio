@@ -13,6 +13,9 @@ body{
 .photo-martine{
     max-width: 100%;
 }
+h3{
+    padding-left: 20px;
+}
 .row{
     flex-wrap: wrap;
     margin-right: -15px;
@@ -25,7 +28,9 @@ body{
     display: block;
     
     .col-home{
-        background-color:$MiddleBlueGreen;
+        /*background-color:$MiddleBlueGreen;*/ 
+        background: linear-gradient(to right, $Ming, $MiddleBlueGreen);
+        opacity: 0.6;
         width: 90%;
         left: 0;
     }
@@ -55,8 +60,14 @@ body{
 
 #Competences{
     display: block;
-    .sectCompetences{
-        background-color: $DarkSalmon;
+    .CompetencesLft{
+        /*background-color: $DarkSalmon;*/ 
+        background: linear-gradient(to right, $DarkSalmon, $UnbleachedSilk);
+        opacity: 0.6;
+    }
+    .CompetencesRght{
+        /*background-color: $DarkSalmon;*/ 
+        background: linear-gradient(to left, $DarkSalmon, $UnbleachedSilk);
         opacity: 0.6;
     }
     .PhotoOrdi{
@@ -71,36 +82,93 @@ body{
     }
     .sectCompetences-text{
         font-size: 1.2em;
+        margin: 0;
     }
 }
 
 #Projets{
     display: block;
-    .sectProjets{
-        background-color: $Ming;
+    .ProjetsRght{
+        background: linear-gradient(to left, $Ming, $MiddleBlueGreen);
         opacity: 0.6;
     }
+    .ProjetsLft{
+        background: linear-gradient(to right, $Ming, $MiddleBlueGreen);
+        opacity: 0.6;
+    }
+    .padProjets{
+        /* mettre un pagging pour palier à l'ffichage de la nav sur les images */
+        padding-top: 5vh;
+    }
+    /* titre des projets */
+    h4{
+        color: $Ming;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+       /* bouton en savoir plus */
+       a{
+           text-decoration: none;
+       }
+       .stylePlus{
+        border: 0;
+        line-height: 2.5;
+        padding: 5px 20px;
+        font-size: 1rem;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 10px;
+        background-color: rgba(0, 109, 119, 0.7);
+        background-image: linear-gradient(to top left,
+                                          rgba(0, 0, 0, .2),
+                                          rgba(0, 0, 0, .2) 30%,
+                                          rgba(0, 0, 0, 0));
+        box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                    inset -2px -2px 3px rgba(0, 0, 0, .6);
+    }
+    .stylePlus:hover{
+        background-color: rgba(131, 197, 190, 0.7);
+    }
+    .stylePlus:active{
+        box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                    inset 2px 2px 3px rgba(0, 0, 0, .6);
+    }
+
 }
 #contact{
     display: block;
+    /* titre pour contact */
+    h5{
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
 
-    .divFlexLogo{
-        background-color: $UnbleachedSilk;
+    .divFlexReseau{
+        background: linear-gradient($DarkSalmon, $UnbleachedSilk);
+        opacity: 0.6;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 2vh
-
+        padding: 2vh;
+        margin-bottom: 5vh;
+    }
+    .centre{
+        align-items: center;
+        justify-content: center;
     }
     .Tel{
         text-align: center;
         padding-top: 2vh;
         padding-bottom: 2vh;
     }
-    .sectContact{
-        background-color: $UnbleachedSilk;
+    .ContactLft{
+        background: linear-gradient(to right, $DarkSalmon, $UnbleachedSilk);
+        opacity: 0.6;
     }
-
+    .ContactRght{
+        background: linear-gradient(to left, $DarkSalmon, $UnbleachedSilk);
+        opacity: 0.6;
+    }
     .gras{
         font-weight: bold;
     }

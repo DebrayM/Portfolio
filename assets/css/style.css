@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*rgb(226, 149, 120)*/
 /*rgb(255, 221, 210)*/
 /*rgb(237, 246, 249)*/
@@ -19,6 +20,10 @@ body {
   max-width: 100%;
 }
 
+h3 {
+  padding-left: 20px;
+}
+
 .row {
   flex-wrap: wrap;
   margin-right: -15px;
@@ -33,7 +38,9 @@ body {
   display: block;
 }
 #home .col-home {
-  background-color: #83C5BE;
+  /*background-color:$MiddleBlueGreen;*/
+  background: linear-gradient(to right, #006D77, #83C5BE);
+  opacity: 0.6;
   width: 90%;
   left: 0;
 }
@@ -61,8 +68,14 @@ body {
 #Competences {
   display: block;
 }
-#Competences .sectCompetences {
-  background-color: #E29578;
+#Competences .CompetencesLft {
+  /*background-color: $DarkSalmon;*/
+  background: linear-gradient(to right, #E29578, #FFDDD2);
+  opacity: 0.6;
+}
+#Competences .CompetencesRght {
+  /*background-color: $DarkSalmon;*/
+  background: linear-gradient(to left, #E29578, #FFDDD2);
   opacity: 0.6;
 }
 #Competences .PhotoOrdi {
@@ -77,34 +90,87 @@ body {
 }
 #Competences .sectCompetences-text {
   font-size: 1.2em;
+  margin: 0;
 }
 
 #Projets {
   display: block;
+  /* titre des projets */
+  /* bouton en savoir plus */
 }
-#Projets .sectProjets {
-  background-color: #006D77;
+#Projets .ProjetsRght {
+  background: linear-gradient(to left, #006D77, #83C5BE);
   opacity: 0.6;
+}
+#Projets .ProjetsLft {
+  background: linear-gradient(to right, #006D77, #83C5BE);
+  opacity: 0.6;
+}
+#Projets .padProjets {
+  /* mettre un pagging pour palier à l'ffichage de la nav sur les images */
+  padding-top: 5vh;
+}
+#Projets h4 {
+  color: #006D77;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+#Projets a {
+  text-decoration: none;
+}
+#Projets .stylePlus {
+  border: 0;
+  line-height: 2.5;
+  padding: 5px 20px;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(0, 109, 119, 0.7);
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+#Projets .stylePlus:hover {
+  background-color: rgba(131, 197, 190, 0.7);
+}
+#Projets .stylePlus:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 #contact {
   display: block;
+  /* titre pour contact */
   /* bouton envoyer */
 }
-#contact .divFlexLogo {
-  background-color: #FFDDD2;
+#contact h5 {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+#contact .divFlexReseau {
+  background: linear-gradient(#E29578, #FFDDD2);
+  opacity: 0.6;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 2vh;
+  margin-bottom: 5vh;
+}
+#contact .centre {
+  align-items: center;
+  justify-content: center;
 }
 #contact .Tel {
   text-align: center;
   padding-top: 2vh;
   padding-bottom: 2vh;
 }
-#contact .sectContact {
-  background-color: #FFDDD2;
+#contact .ContactLft {
+  background: linear-gradient(to right, #E29578, #FFDDD2);
+  opacity: 0.6;
+}
+#contact .ContactRght {
+  background: linear-gradient(to left, #E29578, #FFDDD2);
+  opacity: 0.6;
 }
 #contact .gras {
   font-weight: bold;

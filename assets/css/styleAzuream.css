@@ -1,0 +1,38 @@
+/*rgb(226, 149, 120)*/
+/*rgb(255, 221, 210)*/
+/*rgb(237, 246, 249)*/
+/*rgb(131, 197, 190)*/
+/*rgb(0, 109, 119)*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  margin: 0;
+}
+
+.row {
+  flex-wrap: wrap;
+}
+
+.min-vh-100 {
+  min-height: 100vh !important;
+}
+
+#azuream {
+  display: block;
+}
+#azuream .sectazuream {
+  background-color: #006D77;
+  opacity: 0.6;
+}
+#azuream h4 {
+  color: #006D77;
+  font-weight: bold;
+}
+#azuream .vertical {
+  transform: rotate(-90deg);
+  font-weight: 700;
+  font-size: 2rem;
+  position: absolute;
+}/*# sourceMappingURL=styleAzuream.css.map */

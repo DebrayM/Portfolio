@@ -56,7 +56,9 @@
     max-width: 65%;
   }
   #home .homeRgt {
-    background-color: #83C5BE;
+    /*background-color: $MiddleBlueGreen;*/
+    background: linear-gradient(to left, #006D77, #83C5BE);
+    opacity: 0.6;
   }
 
   #Competences .PhotoOrdi {
@@ -64,6 +66,57 @@
     padding-top: 5vh;
     opacity: 0.4;
     display: block;
+  }
+  #Competences .anim-wd img {
+    /* animation de l'image web design */
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+  }
+  #Competences .anim-wd:hover img {
+    /* animation de l'image gestion de projet */
+    -webkit-animation: mymove 2s infinite linear alternate;
+            animation: mymove 2s infinite linear alternate;
+  }
+  @-webkit-keyframes mymove {
+    to {
+      transform: rotateY(180deg);
+    }
+  }
+  @keyframes mymove {
+    to {
+      transform: rotateY(180deg);
+    }
+  }
+  #Competences .anim-pjt p {
+    position: absolute;
+    margin: 0;
+    font-size: 2em;
+    z-index: 1;
+    opacity: 0;
+  }
+  #Competences .anim-pjt:hover p {
+    opacity: 1;
+    color: white;
+    transition: opacity 1s;
+    cursor: pointer;
+  }
+  #Competences .anim-pjt {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #Competences .anim-pjt img {
+    /* animation de l'image gestion de projet */
+    transition: all 2s;
+    transition-duration: 1s;
+  }
+  #Competences .anim-pjt:hover img {
+    /* animation de l'image gestion de projet */
+    filter: brightness(20%);
+    transform: scale(1.2);
+    cursor: pointer;
   }
 
   #Projets .imgProjet30 {
