@@ -1,0 +1,40 @@
+/*rgb(226, 149, 120)*/
+/*rgb(255, 221, 210)*/
+/*rgb(237, 246, 249)*/
+/*rgb(131, 197, 190)*/
+/*rgb(0, 109, 119)*/
+/* bleu : #006D77, #83C5BE */
+/* saumon : #E29578, #FFDDD2 */
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    margin: 0;
+}
+.divForm{
+    background-color: rgba(255, 221, 210, 0.55);
+}
+
+.coldeskRght{
+    /*background-color: $DarkSalmon;*/
+    background: linear-gradient(to left, #E29578, #FFDDD2);
+    opacity: 0.6;
+  }
+  .coldeskLft{
+      /*background-color: $DarkSalmon;*/
+      background: linear-gradient(to right, #E29578, #FFDDD2);
+      opacity: 0.6;
+}
+    .titreform{
+        margin-top: 2vh;
+        padding: 1em;
+        text-align: center;
+    }
+    label{
+        font-size: 1.2em;
+    }
+    #frame{
+        overflow: hidden;
+    }
