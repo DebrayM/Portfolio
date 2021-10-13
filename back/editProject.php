@@ -1,3 +1,6 @@
+<?php
+require '../Backoffice.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,30 +15,63 @@
     <script src="../assets/js/code.js" async></script>
 </head>
 <body>
-    <form  action="insertProject.php" method="post" enctype= "multipart/form-data">
+    <?php
+    // Vérifie que les données proviennent bien d'un formulaire
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    // Vérifie que l'ID projet est bien passé en paramètre
+        $id = $_GET["id"];
+        /*var_dump($id);*/ 
+        /* etape 1 : rechercher les information en base*/
+        $query = "SELECT title, description, picture, createdat, pagehtml FROM projets WHERE idprojets =". $id;
+        $req = $db->query($query);
+        while($data = $req->fetch()){
+            $file = $data['picture'];
+            $title = $data['title'];
+            $desc = $data['description'];
+            $date = $data['createdat'];
+            $phtml = $data['pagehtml'];
+        }
+        $filesuppr = '../assets/uploads/'. $file;
+    }
+    ?>
+    <form  action="saveEditProject.php" method="post" enctype= "multipart/form-data">
     <div class="container-fluid">
         <div class="row min-vh-100">
             <div class="col-lg-2 coldeskLft"></div>
             <div class="col-lg-8 divForm">
                 <div class="row">
                     <div class="col">
-                    <legend class="titreform">Chargement des images du Portfolio</legend>
+                    <legend class="titreform">Modification des images du Portfolio</legend>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 d-flex flex-column justify-content-center gap-3">
+                        <label for="idprojets">ID</label>
+                        <?php
+                        echo '<input type="text" name="idprojets" id="idprojets" value="'. $id. '" disabled>';
+                        ?>
                         <label for="title">Titre</label>
-                        <input type="text" name="title" id="title" required >
+                        <?php
+                        echo '<input type="text" name="title" id="title" value="'. $title. '">';
+                        ?>
                         <label for="desc">Description</label> 
-                        <input type="text" name="desc" id="desc" required >
+                        <?php
+                        echo '<input type="text" name="desc" id="desc" value="'. $desc. '">';
+                        ?>
+                        <label for="phtml">Page HTML</label> 
+                        <?php
+                        echo '<input type="text" name="phtml" id="phtml" value="'. $phtml. '" >';
+                        ?>
                         <label for="file">Image du projet</label>
-                        <input type="file" name="file" id="file" required  onchange="preview()">
+                        <input type="file" name="file" id="file"  onchange="preview()">
                         <div class="d-flex align-items-center justify-content-center p-3">
                             <input type="submit" class="styled" value="Envoyer"/>
                         </div>
                     </div>
                      <div class="col-lg-6 d-flex align-items-center justify-content-center p-0">
-                        <img id="frame" src=""/>
+                        <?php
+                         echo '<img id="frame" src="'. $filesuppr. '"/>';
+                        ?>
                     </div>
                 </div>
             </div>

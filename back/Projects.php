@@ -34,9 +34,30 @@ require '../Backoffice.php';
                     </tr>
                 <?php
                     foreach($results as $data){
-                        /*date_default_timezone_set('Europe/Paris');
-                        $date = date_format($data['createdat'], "d-m-Y H:m:s");*/
-                        echo "<tr><td>". $data['idprojets']. "</td><td><img src='../assets/uploads/". $data['picture']. "'>". "</td><td>". $data['title']. "</td><td>". $data['createdat']. '</td><td><a href="#" id="edit">Editer</a>/<a href="deleteProject.php?id='. $data['idprojets']. '>Supprimer</a></td></tr>';
+
+                        /* construction de la ligne du tableau */
+                        /* début de ligne*/
+                        $ligne = "<tr>";
+                        /* première colonne : id projet */
+                        $ligne =  $ligne. "<td>". $data['idprojets']. "</td>";
+                        /* seconde colonne : prévisualisation de l'image */
+                        $ligne =  $ligne.  '<td><img src="../assets/uploads/'. $data['picture']. '"></td>';
+                        /* troisième colonne : titre de l'image */
+                        $ligne =  $ligne.  "<td>". $data['title']. "</td>";
+                        /* quatrième colonne : date de création de l'image */
+                        /* date en français */ 
+                        $datefr = date("d-m-Y H:m:s", strtotime($data['createdat']));
+                        $ligne =  $ligne.  "<td>". $datefr. '</td>';
+                        /* cinquième colonne : actions sur l'image */
+                        $ligne =  $ligne.  '<td>';
+                        $ligne =  $ligne. '<a href="editProject.php?id='. $data['idprojets']. '">Editer</a>';
+                        $ligne =  $ligne. '/';
+                        $ligne =  $ligne. '<a href="deleteProject.php?id='. $data['idprojets']. '">Supprimer</a>';
+                        $ligne =  $ligne. '</td>';
+                         /* fin de ligne */
+                         $ligne =  $ligne. "</tr>";
+                          /* affichage de la ligne du tableau */
+                         echo $ligne;
                     }
                 ?>
                 </table>
