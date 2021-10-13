@@ -4,14 +4,26 @@ require '../Backoffice.php';
     // Vérifie que les données proviennent bien d'un formulaire
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérifie que les données ne sont pas vides
-    if ((!isset($_POST["title"])) or (!isset($_POST["desc"])) or (!isset($_POST["phtml"]))) {
-        die("Veuillez saisir le titre et la description");
-    } else {
+    $flag = true;
+    if ( (!isset($_POST["idprojets"])) or empty($_POST["idprojets"]) ) {
+        $flag = false;
+        die("ID du projet est manquant");
+    }
+    if ( (!isset($_POST["title"])) or empty($_POST["title"]) ) {
+        $flag = false;
+        die("Le titre est manquant");
+    }
+    if ( (!isset($_POST["desc"])) or empty($_POST["desc"]) ) {
+        $flag = false;
+        die("La description est manquante");
+    }
+
+    if ($flag) {
         // Vérifie si l'image a été modifiée
         if(isset($_FILES['file'])){
             /* 1 */
             /* etape 1 : rechercher le nom de l'image */
-            $query = "SELECT picture FROM projets WHERE idprojets =". $_POST["id"];
+            $query = "SELECT picture FROM projets WHERE idprojets =". $_POST["idprojets"];
             $req = $db->query($query);
             while($data = $req->fetch()){
                 $file = $data['picture'];
@@ -50,20 +62,20 @@ require '../Backoffice.php';
                 $desc = $_POST["desc"];
                 $phtml = $_POST["phtml"];
 
-                $req = $db->prepare("INSERT INTO projets (title, description, picture, createdat, pagehtml) VALUES (:titre, :desc, :pict, :date, :phtml)");
-                $req -> bindParam(':titre', $titre);
-                $req -> bindParam(':desc', $desc);
-                $req -> bindParam(':pict', $file);
-                $req -> bindParam(':date', $date);
-                $req -> bindParam(':phtml', $phtml);
-                /* 
-                var_dump($titre);
-                var_dump($desc);
-                var_dump($file);
-                var_dump($date);
-                */
+                 /* mise en place de l'update */ 
+                $sql = "UPDATE projets SET title = :titre, description = :desc, ";
+                $sql = $sql. "pagehtml = :phtml, picture = :pict ";
+                $sql = $sql. "WHERE idprojets = ". $_POST["idprojets"]. ";";
+
+                $req = $db->prepare($sql);
+
+                $req -> bindValue(':titre', $titre, PDO::PARAM_STR);
+                $req -> bindValue(':desc', $desc, PDO::PARAM_STR);
+                $req -> bindValue(':pict', $file, PDO::PARAM_STR);
+                $req -> bindValue(':phtml', $phtml, PDO::PARAM_STR);
+
                 $req->execute();
-                echo "Image mise à jour";
+                header('Location: Projects.php');
             }
             else{
                 echo "Une erreur est survenue";

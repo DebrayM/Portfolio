@@ -63,7 +63,8 @@ if ($id = 0) {
                         $ligne =  $ligne.  "<td>". $datefr. '</td>';
                         /* cinquième colonne : actions sur l'image */
                         $message = "Etes-vous sûr de vouloir supprimer l'image : ". $data['title'];
-                        $ligne =  $ligne.  '<td><div class="d-flex flex-column align-items-center justify-content-center gap-1">';
+                        $ligne =  $ligne. '<td><div class="d-flex flex-column align-items-center justify-content-center gap-2">';
+                        $ligne =  $ligne. '<a href="editStructureProject.php?id='. $data['idprojets']. '" class="bnt">Structurer</a>';
                         $ligne =  $ligne. '<a href="editProject.php?id='. $data['idprojets']. '" class="bnt">Editer</a>';
                         $ligne =  $ligne. '<a href="deleteProject.php?id='. $data['idprojets']. '" class="bnt" onclick="return confirm('. $message. ')">Supprimer</a>';
                         $ligne =  $ligne. '</div></td>';

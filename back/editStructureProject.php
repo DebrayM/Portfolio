@@ -32,7 +32,7 @@ if ($id = 0) {
         $id = $_GET["id"];
         /*var_dump($id);*/ 
         /* etape 1 : rechercher les information en base*/
-        $query = "SELECT title, description, picture, createdat, pagehtml FROM projets WHERE idprojets =". $id;
+        $query = "SELECT title, description, picture, createdat, pagehtml, codeposition FROM projets WHERE idprojets =". $id;
         $req = $db->query($query);
         while($data = $req->fetch()){
             $file = $data['picture'];
@@ -40,11 +40,13 @@ if ($id = 0) {
             $desc = $data['description'];
             $date = $data['createdat'];
             $phtml = $data['pagehtml'];
+            $codepos = $data['codeposition'];
+            
         }
         $filesuppr = '../assets/uploads/'. $file;
     }
     ?>
-    <form  action="saveEditProject.php" method="post" enctype= "multipart/form-data">
+    <form  action="saveStructureProject.php" method="post" enctype= "multipart/form-data">
     <div class="container-fluid">
         <div class="row min-vh-100">
             <div class="col-lg-2 coldeskLft"></div>
@@ -72,8 +74,10 @@ if ($id = 0) {
                         <?php
                         echo '<input type="text" name="phtml" id="phtml" value="'. $phtml. '" >';
                         ?>
-                        <label for="file">Image du projet</label>
-                        <input type="file" name="file" id="file"  onchange="preview()">
+                        <label for="codepos">Code positionnement de l'image</label> 
+                        <?php
+                        echo '<input type="text" name="codepos" id="codepos" value="'. $codepos. '" >';
+                        ?>
                         <div class="d-flex align-items-center justify-content-center p-3">
                             <input type="submit" class="styled" value="Envoyer"/>
                         </div>
