@@ -36,7 +36,7 @@ require '../Backoffice.php';
                 $date = date("Y-m-d H:m:s");
                 $titre = $_POST["title"];
                 $desc = $_POST["desc"];
-                $phtml = "Index";
+                $phtml = $_POST["phtml"];
 
                 move_uploaded_file($tmpName, '../assets/uploads/'.$file);
                 $req = $db->prepare("INSERT INTO projets (title, description, picture, createdat, pagehtml) VALUES (:titre, :desc, :pict, :date, :phtml)");
@@ -50,9 +50,10 @@ require '../Backoffice.php';
                 var_dump($desc);
                 var_dump($file);
                 var_dump($date);
+                var_dump($phtml);
                 */
                 $req->execute();
-                echo "Image enregistrée";
+                header('Location: Projects.php');
             }
             else{
                 echo "Une erreur est survenue";
