@@ -40,6 +40,7 @@ if ($id = 0) {
             $desc = $data['description'];
             $date = $data['createdat'];
             $phtml = $data['pagehtml'];
+            var_dump($data['title'], $title);
         }
         $filesuppr = '../assets/uploads/'. $file;
     }

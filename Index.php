@@ -17,7 +17,7 @@ require 'Backoffice.php';
 </head>
 <body>
     <?php
-    $req = $db->query('SELECT title, description, picture FROM projets WHERE page="Index"');
+    $req = $db->query('SELECT title, description, picture, codeposition FROM projets WHERE pagehtml="Index"');
     $results = $req->fetchAll();
     ?>
     <div class="menu">
@@ -34,7 +34,7 @@ require 'Backoffice.php';
                 <div class="col-lg-5 homeLft d-flex align-items-center justify-content-end position-relative p-0">
                     <?php
                         foreach($results as $data){
-                            if ($data['title'] == "Martine Debray"){
+                            if ($data['codeposition'] == "apropos"){
                                 echo "<img src='assets/uploads/". $data['picture']. "' alt='Photo Martine Debray' class='photo-martine'>";
                             }
                         }
@@ -72,7 +72,7 @@ require 'Backoffice.php';
                         <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center anim-wd">
                             <?php
                             foreach($results as $data){
-                                if ($data['title'] == "Outils WD"){
+                                if ($data['codeposition'] == "cptwd"){
                                     echo "<img src='assets/uploads/". $data['picture']. "' alt='photo outils Web Design & intégration'>";
                                 }
                             }
@@ -84,13 +84,13 @@ require 'Backoffice.php';
                     </div>
                     <div class="row">
                         <div class="col-12 col-lg-6 d-flex align-items-center justify-content-end">
-                            <p class="sectCompetences-text">Gestion de projets, Coach Agil, formatrice (Méthodologies). </p>
+                            <p class="sectCompetences-text">Gestion de projets, Coach Agile, formatrice (Méthodologies). </p>
                         </div>
                         <div class="col-12 col-lg-6 anim-pjt">
-                            <p class="sectCompetences-text">Cycle V, Agil, Scrum, kanban, lean, obeya.</p>
+                            <p class="sectCompetences-text">Cycle V, Agile, Scrum, kanban, lean, obeya.</p>
                             <?php
                             foreach($results as $data){
-                                if ($data['title'] == "Outils GdP"){
+                                if ($data['codeposition'] == "cptgestion"){
                                     echo "<img src='assets/uploads/". $data['picture']. "' alt='Photo outils de gestion de projets'>";
                                 }
                             }
@@ -111,52 +111,52 @@ require 'Backoffice.php';
                 <div class="col-md-12 col-lg-9 padProjets">
                     <div class="row d-flex align-items-center justify-content-end p-0">
                         <div class="col-lg-4 d-flex flex-column align-items-center justify-content-center">
-                            <a href="projetSammy.html">
-                                <?php
-                                foreach($results as $data){
-                                    if ($data['title'] == "Oncle Sammy Article Mobile"){
-                                        echo "<img src='assets/uploads/". $data['picture']. "' alt='Photo projet Oncle Sammy' class='img-fluid'>";
-                                    }
-                                }
-                                ?>
-                            </a>
-                            <h4>Restaurant "Oncle Sammy"</h4>
-                            <p>Site vitrine mettant en avant : les viandes grillées.</p>
-                        </div>
-                        <div class="col-lg-4 d-flex flex-column align-items-center justify-content-center">
-                            <a href="projetMusic.html">
-                                <?php
-                                foreach($results as $data){
-                                    if ($data['title'] == "ACS Music Songs"){
-                                        echo "<img src='assets/uploads/". $data['picture']. "' alt='Photo projet ACS Music' class='img-fluid'>";
-                                    }
-                                }
-                                ?>
-                            </a>
-                            <h4>"ACS Music Mobile"</h4>
-                            <p>Site d'écoute de music en ligne pour mobile.</p>
-                        </div>
-                        <div class="col-lg-4 d-flex flex-column align-items-center justify-content-center">
-                            <a href="projetAzuream.html">
                             <?php
                             foreach($results as $data){
-                                if ($data['title'] == "AZUREAM Accueil Mobile"){
-                                    echo "<img src='assets/uploads/". $data['picture']. "' alt='Photo projet AZUREAM' class='img-fluid'>";
+                                if ($data['codeposition'] == "prjcol1"){
+                                    $imgcol1 = '<a href="projetSammy.php">';
+                                    $imgcol1 = $imgcol1. "<img src='assets/uploads/". $data['picture']. "' alt='Photo projet Oncle Sammy' class='img-fluid'>";
+                                    $imgcol1 = $imgcol1. "</a>";
+                                    echo $imgcol1;
+                                    echo "<h4>". $data['title']. "</h4>";
+                                    echo "<p>". $data['description']. "</p>";
                                 }
                             }
                             ?>
-                            </a>
-                            <h4>"AZUREAM"</h4>
-                            <p>Site responsive de vente de séjours dans l'espace.</p>
+                        </div>
+                        <div class="col-lg-4 d-flex flex-column align-items-center justify-content-center">
+                            <?php
+                            foreach($results as $data){
+                                if ($data['codeposition'] == "prjcol2"){
+                                    $imgcol2 = '<a href="projetMusic.php">';
+                                    $imgcol2 = $imgcol2. "<img src='assets/uploads/". $data['picture']. "' alt='Photo projet ACS Music Mobile' class='img-fluid'>";
+                                    $imgcol2 = $imgcol2. "</a>";
+                                    echo $imgcol2;
+                                    echo "<h4>". $data['title']. "</h4>";
+                                    echo "<p>". $data['description']. "</p>";
+                                }
+                            }
+                            ?>
+                        </div>
+                        <div class="col-lg-4 d-flex flex-column align-items-center justify-content-center">
+                            <?php
+                            foreach($results as $data){
+                                if ($data['codeposition'] == "prjcol3"){
+                                    $imgcol3 = '<a href="projetAzuream.php">';
+                                    $imgcol3 = $imgcol3. "<img src='assets/uploads/". $data['picture']. "' alt='Photo projet Azuream' class='img-fluid'>";
+                                    $imgcol3 = $imgcol3. "</a>";
+                                    echo $imgcol3;
+                                    echo "<h4>". $data['title']. "</h4>";
+                                    echo "<p>". $data['description']. "</p>";
+                                }
+                            }
+                            ?>
                         </div>
                         <div class="row ">
                             <div class="col-lg-12 d-flex align-items-center justify-content-center p-0">
-                                <a href="projets.html" class="stylePlus mt-5">Voir plus de projets</a>
+                                <a href="projets.php" class="stylePlus mt-5">Voir plus de projets</a>
                             </div>
                         </div>
-                        <div class="col-lg-4 d-flex align-items-center justify-content-center"><img src="" alt="" class="img-fluid"></div>
-                        <div class="col-lg-4 d-flex align-items-center justify-content-center"><img src="" alt="" class="img-fluid"></div>
-                        <div class="col-lg-4 d-flex align-items-center justify-content-center"><img src="" alt="" class="img-fluid"></div>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-1 ProjetsRght d-flex align-items-center justify-content-end p-0"></div>

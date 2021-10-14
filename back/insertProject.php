@@ -35,22 +35,28 @@ require '../Backoffice.php';
                 date_default_timezone_set('UTC');
                 $date = date("Y-m-d H:m:s");
                 $titre = $_POST["title"];
+                $titre = htmlentities($titre);
                 $desc = $_POST["desc"];
+                $desc = htmlentities($desc);
                 $phtml = $_POST["phtml"];
+                $codepos = strtolower($phtml);
 
                 move_uploaded_file($tmpName, '../assets/uploads/'.$file);
-                $req = $db->prepare("INSERT INTO projets (title, description, picture, createdat, pagehtml) VALUES (:titre, :desc, :pict, :date, :phtml)");
-                $req -> bindParam(':titre', $titre);
-                $req -> bindParam(':desc', $desc);
-                $req -> bindParam(':pict', $file);
-                $req -> bindParam(':date', $date);
-                $req -> bindParam(':phtml', $phtml);
-                /* 
+
+                $req = $db->prepare("INSERT INTO projets (title, description, picture, createdat, pagehtml, codeposition) VALUES (:titre, :desc, :pict, :date, :phtml, :codepos)");
+                $req -> bindValue(':titre', $titre, PDO::PARAM_STR);
+                $req -> bindValue(':desc', $desc, PDO::PARAM_STR);
+                $req -> bindValue(':pict', $file, PDO::PARAM_STR);
+                $req -> bindValue(':date', $date, PDO::PARAM_STR);
+                $req -> bindValue(':phtml', $phtml, PDO::PARAM_STR);
+                $req -> bindValue(':codepos', $codepos, PDO::PARAM_STR);
+                /*
                 var_dump($titre);
                 var_dump($desc);
                 var_dump($file);
                 var_dump($date);
                 var_dump($phtml);
+                var_dump($codepos);
                 */
                 $req->execute();
                 header('Location: Projects.php');

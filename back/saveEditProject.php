@@ -58,8 +58,12 @@ require '../Backoffice.php';
                 /* format de date anglaise pour le stockage */
                 date_default_timezone_set('UTC');
                 $date = date("Y-m-d H:m:s");
+
                 $titre = $_POST["title"];
+                $titre = htmlentities($titre);
                 $desc = $_POST["desc"];
+                $desc = htmlentities($desc);
+
                 $phtml = $_POST["phtml"];
 
                  /* mise en place de l'update */ 

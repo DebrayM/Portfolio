@@ -35,7 +35,10 @@ require '../Backoffice.php';
     if ($flag) {
  
         $titre = $_POST["title"];
+        $titre = htmlentities($titre);
         $desc = $_POST["desc"];
+        $desc = htmlentities($desc);
+
         $phtml = $_POST["phtml"];
         $codepos = $_POST["codepos"];
         $id = $_POST["idprojets"];
